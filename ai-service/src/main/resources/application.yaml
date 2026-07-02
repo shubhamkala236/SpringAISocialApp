@@ -1,0 +1,27 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: ai-service
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2
+          temperature: 0.7
+
+jwt:
+  secret: f7e2c9a14b8d3f6e0a5c8b2d9e4f1a7c3b6d8e0f2a4c6b8d0e2f4a6c8b0d2e4f
+  issuer: SocialApp
+  audience: SocialApp
+  expiration-days: 7
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
